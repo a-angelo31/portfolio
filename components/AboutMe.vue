@@ -7,7 +7,7 @@
       <div
         class="card rounded-lg w-fit md:w-full bg-white text-primary-content mb-10 mx-5 sm:mb-10 right"
       >
-        <div class="card-body">
+        <div class="card-body text-center">
           <h2
             class="card-title font-bold text-4xl justify-center text-[#4e2edfaf]"
           >
