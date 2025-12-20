@@ -30,6 +30,15 @@
         :badges="['Nuxt 3', 'Tailwind', 'Daisy Ui']"
       />
     </div>
+    <div class="top">
+      <ProjectCard
+        imageSrc="/projects/portfolio/ConfidentialProject.png"
+        altText="Confidential Project (NDA)"
+        cardTitle="Confidential Client Project"
+        description="This project was developed during my current work and is protected under a Non-Disclosure Agreement (NDA). While I’m unable to share specific details or source code, the work involved building responsive, SEO-optimized websites, handling revisions, and ensuring quality standards for production-ready delivery."
+        :badges="['Duda', 'SEO', 'Responsive Design', 'Client Revisions']"
+      />
+    </div>
   </div>
 </template>
 

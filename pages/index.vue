@@ -38,6 +38,9 @@
         >
           Angelo Gabriel
         </h1>
+        <h2 class="mt-3 text-lg md:text-xl text-white tracking-wide font-della">
+          Web Designer & Front-End Developer
+        </h2>
         <div class="flex flex-wrap gap-4 mt-6">
           <NuxtLink
             to="https://www.facebook.com/angelo.evangelista.148/"

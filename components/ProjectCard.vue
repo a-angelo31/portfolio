@@ -3,12 +3,21 @@
     <figure class="relative group">
       <img :src="imageSrc" :alt="altText" class="w-full" />
       <NuxtLink
+        v-if="githubLink"
         :to="githubLink"
         target="_blank"
-        class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-        >View on GitHub</NuxtLink
+        class="absolute inset-0 flex items-center justify-center bg-black/50 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"
       >
+        View on GitHub
+      </NuxtLink>
+      <div
+        v-else
+        class="absolute inset-0 flex items-center justify-center bg-black/60 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+      >
+        🔒 Confidential Project
+      </div>
     </figure>
+
     <div class="card-body">
       <h2 class="card-title font-bold">
         {{ cardTitle }}
@@ -47,7 +56,7 @@ const props = defineProps({
   },
   githubLink: {
     type: String,
-    required: true,
+    required: false,
   },
   cardTitle: {
     type: String,
