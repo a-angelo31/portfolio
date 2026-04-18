@@ -119,7 +119,7 @@
           Angelo Gabriel D. Evangelista <br />
           Created By Me 💘
         </p>
-        <p>Copyright © 2024 - All right reserved</p>
+        <p>Copyright © 2026 - All right reserved</p>
       </aside>
       <nav>
         <div class="flex space-between gap-4">
@@ -154,17 +154,7 @@
 </template>
 
 <script setup>
-// const isDarkTheme = ref(false);
-
-// watch(isDarkTheme, (newTheme) => {
-//   const theme = newTheme ? "dark" : "light";
-//   document.documentElement.setAttribute("data-theme", theme);
-// });
-
-// onMounted(() => {
-//   const initialTheme = isDarkTheme.value ? "dark" : "light";
-//   document.documentElement.setAttribute("data-theme", initialTheme);
-// });
+//
 </script>
 
 <style>
