@@ -33,8 +33,8 @@
           :class="[
             'badge badge-outline',
             index % 2 === 0
-              ? 'bg-[#260b9caf] text-white'
-              : 'bg-[#C7FFB2] text-black',
+              ? 'bg-primary text-white'
+              : 'bg-light-green text-black',
           ]"
         >
           {{ badge }}

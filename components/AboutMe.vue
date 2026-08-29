@@ -9,9 +9,9 @@
       >
         <div class="card-body text-center">
           <h2
-            class="card-title font-bold text-4xl justify-center text-[#4e2edfaf]"
+            class="card-title font-bold text-4xl justify-center text-secondary"
           >
-            &lt; ABOUT ME /&gt;
+            {{ "< ABOUT ME />" }}
           </h2>
           <p
             class="text-md text-gray-600 pb-2 leading-relaxed max-w-xs sm:max-w-md md:max-w-2xl md:text-xl border-b-2"
@@ -29,8 +29,8 @@
             motivates me. I’m always learning, experimenting, and refining my
             craft to build digital experiences that leave a lasting impression.
           </p>
-          <h2 class="text-2xl font-medium text-[#4e2edfaf]">
-            &lt; Contact Information /&gt
+          <h2 class="text-2xl font-medium text-secondary">
+            {{ "< Contact Information />" }}
           </h2>
           <div
             class="text-md pb-4 text-gray-600 leading-relaxed max-w-xs sm:max-w-md md:max-w-2xl md:text-xl border-b-2 items-center"
@@ -57,13 +57,13 @@
           </p>
 
           <div class="card-actions justify-center">
-            <a
-              href="#"
-              onclick="Calendly.initPopupWidget({url: 'https://calendly.com/evangelistaangelo38'});return false;"
-              class="btn bg-[#4e2edfaf] text-white font-bold"
+            <button
+              type="button"
+              @click="openCalendly"
+              class="btn bg-secondary text-white font-bold"
             >
               Schedule meeting with me
-            </a>
+            </button>
           </div>
         </div>
       </div>
@@ -72,68 +72,12 @@
 </template>
 
 <script setup>
-import "animate.css";
-import "intersection-observer";
+const { initScrollAnimations } = useScrollAnimation();
 
 onMounted(() => {
-  if (process.client) {
-    const sliders = document.querySelectorAll(".left");
+  initScrollAnimations();
 
-    const appearOptions = {
-      threshold: 0, // Adjust the threshold value as needed
-    };
-
-    const appearOnScroll = new IntersectionObserver(
-      (entries, appearOnScroll) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add(
-              "animate__animated",
-              "animate__fadeInLeft"
-            );
-            appearOnScroll.unobserve(entry.target);
-          }
-        });
-      },
-      appearOptions
-    );
-
-    sliders.forEach((slider) => {
-      appearOnScroll.observe(slider);
-    });
-  }
-});
-
-onMounted(() => {
-  if (process.client) {
-    const sliders = document.querySelectorAll(".right");
-
-    const appearOptions = {
-      threshold: 0, // Adjust the threshold value as needed
-    };
-
-    const appearOnScroll = new IntersectionObserver(
-      (entries, appearOnScroll) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add(
-              "animate__animated",
-              "animate__fadeInRight"
-            );
-            appearOnScroll.unobserve(entry.target);
-          }
-        });
-      },
-      appearOptions
-    );
-
-    sliders.forEach((slider) => {
-      appearOnScroll.observe(slider);
-    });
-  }
-});
-
-onMounted(() => {
+  // Load Calendly widget
   const link = document.createElement("link");
   link.href = "https://assets.calendly.com/assets/external/widget.css";
   link.rel = "stylesheet";
@@ -144,6 +88,15 @@ onMounted(() => {
   script.async = true;
   document.body.appendChild(script);
 });
+
+const openCalendly = () => {
+  if (window.Calendly) {
+    window.Calendly.initPopupWidget({
+      url: "https://calendly.com/evangelistaangelo38",
+    });
+  }
+  return false;
+};
 </script>
 
 <style scoped>

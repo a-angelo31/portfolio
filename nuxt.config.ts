@@ -5,29 +5,20 @@ export default defineNuxtConfig({
     "@nuxtjs/google-fonts",
     "@nuxtjs/color-mode",
   ],
+  css: ["animate.css"],
   googleFonts: {
     families: {
       Oswald: {
         wght: [300, 400, 500, 600, 700],
       },
-      "Jacquard 12": {
-        wght: [300, 400, 500, 600, 700],
-      },
+      "Jacquard 12": true,
       "Azeret Mono": {
         wght: [300, 400, 500, 600, 700],
       },
-      "Della Respira": {
-        wght: [300, 400, 500, 600, 700],
-      },
-      Sacramento: {
-        wght: [300, 400, 500, 600, 700],
-      },
-      "Abril Fatface": {
-        wght: [300, 400, 500, 600, 700],
-      },
-      "Gideon Roman": {
-        wght: [300, 400, 500, 600, 700],
-      },
+      "Della Respira": true,
+      Sacramento: true,
+      "Abril Fatface": true,
+      "Gideon Roman": true,
     },
   },
   devtools: { enabled: false },

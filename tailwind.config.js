@@ -26,6 +26,14 @@ module.exports = {
       // => @media (min-width: 1280px) { ... }
     },
     extend: {
+      colors: {
+        primary: "#260b9caf",
+        secondary: "#4e2edfaf",
+        "primary-hover": "#1e086b",
+        "light-bg": "#f5eeed",
+        "dark-text": "#000000af",
+        "light-green": "#C7FFB2",
+      },
       fontFamily: {
         oswald: ["Oswald", "sans-serif"],
         jacquard: ["Jacquard 12", "sans-serif"],

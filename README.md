@@ -1,8 +1,19 @@
-# Nuxt 3 Minimal Starter
+# Angelo's Portfolio
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+A personal portfolio website built with **Nuxt 3**, **Vue 3**, and **Tailwind CSS**, showcasing my work as a Web Designer and Front-End Developer.
 
-## Setup
+## ✨ Features
+
+- 🎨 Animated gradient hero section with interactive mouse-follow background
+- 🌗 Light/Dark theme toggle (via `@nuxtjs/color-mode`)
+- 📱 Fully responsive layout with mobile hamburger menu
+- 🧩 Reusable components (ProjectCard, TheCard, SocialLinks, etc.)
+- 🎞️ Scroll-triggered animations
+- 📄 SEO meta tags (Open Graph + Twitter cards)
+- 💬 Testimonials carousel
+- 📅 Calendly meeting scheduler integration
+
+## 🚀 Setup
 
 Make sure to install the dependencies:
 
@@ -20,7 +31,7 @@ yarn install
 bun install
 ```
 
-## Development Server
+## 🛠️ Development Server
 
 Start the development server on `http://localhost:3000`:
 
@@ -38,7 +49,7 @@ yarn dev
 bun run dev
 ```
 
-## Production
+## 🏗️ Production
 
 Build the application for production:
 
@@ -56,7 +67,7 @@ yarn build
 bun run build
 ```
 
-Locally preview production build:
+Locally preview the production build:
 
 ```bash
 # npm
@@ -72,4 +83,25 @@ yarn preview
 bun run preview
 ```
 
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+## 🧩 Tech Stack
+
+- **Framework:** Nuxt 3 / Vue 3
+- **Styling:** Tailwind CSS + DaisyUI
+- **Fonts:** Google Fonts (Oswald, Azeret Mono, Della Respira, Sacramento, Abril Fatface, Gideon Roman, Jacquard 12)
+- **Animations:** Animate.css + custom scroll animations
+- **Theme:** @nuxtjs/color-mode
+
+## 📁 Project Structure
+
+```
+components/       Reusable Vue components
+layouts/          Default layout (header, footer, theme toggle)
+pages/            Route pages (index, about)
+public/           Static assets (images, icons, logos, skills)
+composables/      Shared composables (scroll animations)
+server/           Server-side code
+```
+
+## 📄 License
+
+Copyright © 2026 Angelo Gabriel D. Evangelista — All rights reserved.

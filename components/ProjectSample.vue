@@ -43,36 +43,10 @@
 </template>
 
 <script setup>
-import "animate.css";
-import "intersection-observer";
+const { initScrollAnimations } = useScrollAnimation();
 
 onMounted(() => {
-  if (process.client) {
-    const sliders = document.querySelectorAll(".top");
-
-    const appearOptions = {
-      threshold: 0, // Adjust the threshold value as needed
-    };
-
-    const appearOnScroll = new IntersectionObserver(
-      (entries, appearOnScroll) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add(
-              "animate__animated",
-              "animate__fadeInUp"
-            );
-            appearOnScroll.unobserve(entry.target);
-          }
-        });
-      },
-      appearOptions
-    );
-
-    sliders.forEach((slider) => {
-      appearOnScroll.observe(slider);
-    });
-  }
+  initScrollAnimations();
 });
 </script>
 

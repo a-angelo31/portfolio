@@ -1,6 +1,12 @@
 <template>
-  <div class="max-w-4xl mx-auto my-10 h-auto bg-[#f5eeed] top">
-    <div class="relative overflow-hidden">
+  <div class="max-w-4xl mx-auto my-10 h-auto bg-light-bg top">
+    <div
+      class="relative overflow-hidden"
+      @mouseenter="pauseAutoPlay"
+      @mouseleave="startAutoPlay"
+      @touchstart="onTouchStart"
+      @touchend="onTouchEnd"
+    >
       <div
         class="flex transition-transform duration-700 ease-in-out items-center"
         :style="{ transform: `translateX(-${currentIndex * 100}%)` }"
@@ -14,7 +20,7 @@
             <img
               v-if="testimonial.image"
               :src="testimonial.image"
-              alt="Profile Photo"
+              :alt="`${testimonial.author} testimonial`"
               class="w-3/5 h-3/5 object-contain mt-3 mx-auto"
             />
             <p class="text-lg text-gray-700 mb-4">{{ testimonial.text }}</p>
@@ -28,7 +34,8 @@
       <!-- Carousel Controls -->
       <button
         @click="prev"
-        class="absolute top-1/2 transform -translate-y-1/2 left-0 bg-white rounded-full p-2 shadow-md"
+        aria-label="Previous testimonial"
+        class="absolute top-1/2 transform -translate-y-1/2 left-0 bg-white rounded-full p-2 shadow-md hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -48,7 +55,8 @@
       <!-- Right Arrow Button -->
       <button
         @click="next"
-        class="absolute top-1/2 transform -translate-y-1/2 right-0 bg-white rounded-full p-2 shadow-md"
+        aria-label="Next testimonial"
+        class="absolute top-1/2 transform -translate-y-1/2 right-0 bg-white rounded-full p-2 shadow-md hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -68,52 +76,23 @@
     </div>
     <!-- Indicators -->
     <div class="flex justify-center mt-4">
-      <span
+      <button
         v-for="(testimonial, index) in testimonials"
         :key="index"
         @click="goToSlide(index)"
-        class="mx-1 cursor-pointer h-2 w-2 rounded-full inline-block"
+        :aria-label="`Go to testimonial ${index + 1}`"
+        class="mx-1 cursor-pointer h-2 w-2 rounded-full inline-block focus:outline-none focus:ring-2 focus:ring-blue-500"
         :class="{
           'bg-blue-500': currentIndex === index,
           'bg-gray-400': currentIndex !== index,
         }"
-      ></span>
+      ></button>
     </div>
   </div>
 </template>
 
 <script setup>
-import "animate.css";
-import "intersection-observer";
-
-onMounted(() => {
-  if (process.client) {
-    const sliders = document.querySelectorAll(".top");
-
-    const appearOptions = {
-      threshold: 0, // Adjust the threshold value as needed
-    };
-
-    const appearOnScroll = new IntersectionObserver(
-      (entries, appearOnScroll) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add(
-              "animate__animated",
-              "animate__fadeInUp"
-            );
-            appearOnScroll.unobserve(entry.target);
-          }
-        });
-      },
-      appearOptions
-    );
-
-    sliders.forEach((slider) => {
-      appearOnScroll.observe(slider);
-    });
-  }
-});
+const { initScrollAnimations } = useScrollAnimation();
 
 const testimonials = ref([
   {
@@ -146,6 +125,8 @@ const testimonials = ref([
 ]);
 
 const currentIndex = ref(0);
+const autoPlayInterval = ref(null);
+const touchStartX = ref(0);
 
 const prev = () => {
   if (currentIndex.value > 0) {
@@ -166,6 +147,56 @@ const next = () => {
 const goToSlide = (index) => {
   currentIndex.value = index;
 };
+
+const startAutoPlay = () => {
+  if (autoPlayInterval.value) return;
+  autoPlayInterval.value = setInterval(() => {
+    next();
+  }, 5000);
+};
+
+const pauseAutoPlay = () => {
+  if (autoPlayInterval.value) {
+    clearInterval(autoPlayInterval.value);
+    autoPlayInterval.value = null;
+  }
+};
+
+const onTouchStart = (event) => {
+  touchStartX.value = event.touches[0].clientX;
+};
+
+const onTouchEnd = (event) => {
+  const touchEndX = event.changedTouches[0].clientX;
+  const deltaX = touchStartX.value - touchEndX;
+
+  if (Math.abs(deltaX) > 50) {
+    if (deltaX > 0) {
+      next();
+    } else {
+      prev();
+    }
+  }
+};
+
+const onKeydown = (event) => {
+  if (event.key === "ArrowLeft") {
+    prev();
+  } else if (event.key === "ArrowRight") {
+    next();
+  }
+};
+
+onMounted(() => {
+  initScrollAnimations();
+  startAutoPlay();
+  window.addEventListener("keydown", onKeydown);
+});
+
+onBeforeUnmount(() => {
+  pauseAutoPlay();
+  window.removeEventListener("keydown", onKeydown);
+});
 </script>
 
 <style scoped>

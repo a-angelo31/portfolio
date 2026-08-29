@@ -42,36 +42,13 @@
           Web Designer & Front-End Developer
         </h2>
         <div class="flex flex-wrap gap-4 mt-6">
-          <NuxtLink
-            to="https://www.facebook.com/angelo.evangelista.148/"
-            class="size-9 bg-black middle rounded-full z-40 hover:animate-spin"
-            target="_blank"
-            ><img src="/icons/facebook.svg" alt="Facebook"
-          /></NuxtLink>
-          <NuxtLink
-            to="https://www.instagram.com/evang81194/"
-            target="_blank"
-            class="flex-none size-9 bg-black middle rounded-full z-40 hover:animate-spin"
-            ><img src="/icons/instagram.svg" alt="Instagram"
-          /></NuxtLink>
-          <NuxtLink
-            to="https://www.linkedin.com/in/angelo-gabriel-evangelista-a6276222a/"
-            target="_blank"
-            class="size-9 bg-black middle rounded-full z-40 hover:animate-spin"
-            ><img src="/icons/linkedin.svg" alt="LinkedIn"
-          /></NuxtLink>
-          <NuxtLink
-            to="https://github.com/g-gelo"
-            target="_blank"
-            class="size-9 bg-black middle rounded-full z-40 hover:animate-spin"
-            ><img src="/icons/github.svg" alt="Github"
-          /></NuxtLink>
+          <SocialLinks />
         </div>
         <div class="mt-6 z-40">
           <a
             href="/projects/portfolio/Resume — Angelo Gabriel D. Evangelista.pdf"
             target="_blank"
-            class="btn bg-[#260b9caf] hover:bg-[#1e086b] text-white font-bold py-2 px-4 rounded"
+            class="btn bg-primary hover:bg-primary-hover text-white font-bold py-2 px-4 rounded"
           >
             Download Resume
           </a>
@@ -84,22 +61,22 @@
         <img
           src="/img/Me-2.png"
           alt="Angelo Gabriel D. Evangelista — Front-End Developer/Designer"
-          class="size-9/12 object-contain md:w-auto md:h-full lg:size-7/12 lg:mt-20"
+          class="w-9/12 object-contain md:w-auto md:h-full lg:w-7/12 lg:mt-20"
         />
       </div>
     </div>
     <!-- What I Do -->
-    <div id="about-me" class="h-auto md:h-auto flex flex-col p-4 bg-[#f5eeed]">
+    <div id="about-me" class="h-auto md:h-auto flex flex-col p-4 bg-light-bg">
       <div
         class="flex flex-col justify-center items-center mt-20 mb-10 sm:mb-24 sm:mt-20"
       >
         <h1
-          class="text-2xl md:text-4xl font-extrabold text-center text-[#000000af] left"
+          class="text-2xl md:text-4xl font-extrabold text-center text-dark-text left"
         >
           "CHASE YOUR PASSION
         </h1>
         <h1
-          class="text-2xl md:text-4xl font-extrabold text-center text-[#260b9caf] right"
+          class="text-2xl md:text-4xl font-extrabold text-center text-primary right"
         >
           IN YOUR OWN FASHION"
         </h1>
@@ -109,39 +86,34 @@
           iconPath="/icons/book.svg"
           title="Reading"
           description="Medium offers diverse articles, from motivation to programming insights, enriching my reading experience."
-          link="https://medium.com/tag/node-js-development"
           buttonText="View Link"
         />
         <TheCard
           iconPath="/icons/music.svg"
           title="Music"
           description="I love listening to music. I don't have a specific genre that I prefer; the only music genre that I hate is the music that I don't listen to."
-          link="https://medium.com/tag/node-js-development"
           buttonText="View Link"
         />
         <TheCard
           iconPath="/icons/writing.svg"
           title="Writing"
           description="Writing down my thoughts process, especially in the morning, helps me stay on track and achieve my goals."
-          link="https://medium.com/tag/node-js-development"
           buttonText="View Link"
         />
       </div>
     </div>
     <!-- About Me -->
-    <div
-      class="flex justify-center items-center md:mb-0 md:mt-0 bg-[#260b9caf]"
-    >
+    <div class="flex justify-center items-center md:mb-0 md:mt-0 bg-primary">
       <AboutMe />
     </div>
     <!-- Sample Project -->
     <div
       id="projects"
-      class="h-auto bg-[#f5eeed] flex justify-center flex-col items-center"
+      class="h-auto bg-light-bg flex justify-center flex-col items-center"
     >
       <div class="font-bold text-4xl flex flex-col items-center mb-8 mt-10">
-        <h1 class="text-center text-[#000000af] left">SAMPLE</h1>
-        <h1 class="text-[#260b9caf] right">PROJECT</h1>
+        <h1 class="text-center text-dark-text left">SAMPLE</h1>
+        <h1 class="text-primary right">PROJECT</h1>
       </div>
       <div class="mb-10">
         <ProjectSample />
@@ -149,7 +121,7 @@
     </div>
 
     <!-- Skills Overview -->
-    <div id="skills" class="bg-[#260b9caf]">
+    <div id="skills" class="bg-primary">
       <SkillUsed />
     </div>
 
@@ -158,7 +130,7 @@
       id="testimonials"
       class="max-w-5xl mx-auto my-12 p-6 bg-gray-100 rounded-lg shadow-lg"
     >
-      <h2 class="text-4xl font-bold text-center text-[#260b9caf] mb-6 left">
+      <h2 class="text-4xl font-bold text-center text-primary mb-6 left">
         TESTIMONIALS
       </h2>
       <p class="text-center text-gray-600 mb-8">
@@ -172,133 +144,82 @@
 </template>
 
 <script setup>
-import "animate.css";
-import "intersection-observer";
-
 useHead({
   title: "Angelo's Portfolio",
+  meta: [
+    {
+      name: "description",
+      content:
+        "Angelo Gabriel D. Evangelista — Web Designer and Front-End Developer based in the Philippines. Specializing in clean, responsive, and visually engaging websites using Duda, WordPress, Vue, and Nuxt.",
+    },
+    { property: "og:title", content: "Angelo's Portfolio" },
+    {
+      property: "og:description",
+      content:
+        "Web Designer & Front-End Developer crafting clean, responsive, and visually engaging digital experiences.",
+    },
+    { property: "og:type", content: "website" },
+    { property: "og:url", content: "https://g-gelo.github.io/portfolio" },
+    { property: "og:image", content: "/img/Me-2.png" },
+    { name: "twitter:card", content: "summary_large_image" },
+    { name: "twitter:title", content: "Angelo's Portfolio" },
+    {
+      name: "twitter:description",
+      content:
+        "Web Designer & Front-End Developer crafting clean, responsive, and visually engaging digital experiences.",
+    },
+    { name: "twitter:image", content: "/img/Me-2.png" },
+  ],
 });
+
+const { initScrollAnimations } = useScrollAnimation();
 
 onMounted(() => {
-  if (process.client) {
-    const sliders = document.querySelectorAll(".left");
-
-    const appearOptions = {
-      threshold: 0, // Adjust the threshold value as needed
-    };
-
-    const appearOnScroll = new IntersectionObserver(
-      (entries, appearOnScroll) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add(
-              "animate__animated",
-              "animate__fadeInLeft"
-            );
-            appearOnScroll.unobserve(entry.target);
-          }
-        });
-      },
-      appearOptions
-    );
-
-    sliders.forEach((slider) => {
-      appearOnScroll.observe(slider);
-    });
-  }
+  initScrollAnimations();
 });
 
-onMounted(() => {
-  if (process.client) {
-    const sliders = document.querySelectorAll(".right");
-
-    const appearOptions = {
-      threshold: 0, // Adjust the threshold value as needed
-    };
-
-    const appearOnScroll = new IntersectionObserver(
-      (entries, appearOnScroll) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add(
-              "animate__animated",
-              "animate__fadeInRight"
-            );
-            appearOnScroll.unobserve(entry.target);
-          }
-        });
-      },
-      appearOptions
-    );
-
-    sliders.forEach((slider) => {
-      appearOnScroll.observe(slider);
-    });
-  }
-});
-
-onMounted(() => {
-  if (process.client) {
-    const sliders = document.querySelectorAll(".top");
-
-    const appearOptions = {
-      threshold: 0, // Adjust the threshold value as needed
-    };
-
-    const appearOnScroll = new IntersectionObserver(
-      (entries, appearOnScroll) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add(
-              "animate__animated",
-              "animate__fadeInUp"
-            );
-            appearOnScroll.unobserve(entry.target);
-          }
-        });
-      },
-      appearOptions
-    );
-
-    sliders.forEach((slider) => {
-      appearOnScroll.observe(slider);
-    });
-  }
-});
+// Interactive hero background animation with proper cleanup
+let animationFrameId = null;
+let mouseMoveHandler = null;
 
 onMounted(() => {
   const interBubble = document.querySelector(".interactive");
+  if (!interBubble) return;
+
   let curX = 0;
   let curY = 0;
   let tgX = 0;
   let tgY = 0;
 
-  function move() {
+  const move = () => {
     curX += (tgX - curX) / 20;
     curY += (tgY - curY) / 20;
     interBubble.style.transform = `translate(${Math.round(
-      curX
+      curX,
     )}px, ${Math.round(curY)}px)`;
-    requestAnimationFrame(() => {
-      move();
-    });
-  }
+    animationFrameId = requestAnimationFrame(move);
+  };
 
-  window.addEventListener("mousemove", (event) => {
+  mouseMoveHandler = (event) => {
     tgX = event.clientX;
     tgY = event.clientY;
-  });
+  };
 
+  window.addEventListener("mousemove", mouseMoveHandler);
   move();
+});
+
+onBeforeUnmount(() => {
+  if (animationFrameId) {
+    cancelAnimationFrame(animationFrameId);
+  }
+  if (mouseMoveHandler) {
+    window.removeEventListener("mousemove", mouseMoveHandler);
+  }
 });
 </script>
 
 <style>
-.middle {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 :root {
   --color-bg1: rgb(108, 0, 162);
   --color-bg2: rgb(0, 17, 82);

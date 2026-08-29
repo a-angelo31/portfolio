@@ -1,7 +1,7 @@
 <template>
   <div class="flex flex-col min-h-screen">
     <header
-      class="flex justify-between items-center p-4 bg-[#260b9caf] sticky top-0 backdrop-filter z-50"
+      class="flex justify-between items-center p-4 bg-primary sticky top-0 backdrop-filter z-50"
     >
       <div>
         <NuxtLink to="/">
@@ -12,21 +12,19 @@
       <div class="flex items-center">
         <!-- Navigation links for larger screens -->
         <div class="hidden lg:flex text-white gap-4 font-bold items-center">
-          <NuxtLink to="#hero" class="hover:text-[#260b9caf]">Home</NuxtLink>
-          <NuxtLink to="#about-me" class="hover:text-[#260b9caf]"
-            >About</NuxtLink
-          >
-          <NuxtLink to="#projects" class="hover:text-[#260b9caf]"
+          <NuxtLink to="#hero" class="hover:text-primary">Home</NuxtLink>
+          <NuxtLink to="#about-me" class="hover:text-primary">About</NuxtLink>
+          <NuxtLink to="#projects" class="hover:text-primary"
             >Projects</NuxtLink
           >
-          <NuxtLink to="#skills" class="hover:text-[#260b9caf]"
+          <NuxtLink to="#skills" class="hover:text-primary"
             >Capability</NuxtLink
           >
-          <NuxtLink to="#testimonials" class="hover:text-[#260b9caf]"
+          <NuxtLink to="#testimonials" class="hover:text-primary"
             >Testimonials</NuxtLink
           >
           <a
-            class="btn bg-[#4e2edfaf] text-white"
+            class="btn bg-secondary text-white"
             href="mailto:evangelistaangelo38@gmail.com"
           >
             Say Hi
@@ -34,14 +32,14 @@
           </a>
         </div>
 
-        <!-- Theme toggle switch for both large and small screens
+        <!-- Theme toggle switch for both large and small screens -->
         <div class="ml-4 hidden lg:block lg:middle">
           <input
             type="checkbox"
             v-model="isDarkTheme"
             class="toggle theme-controller bg-amber-300 border-sky-400 [--tglbg:theme(colors.sky.500)] checked:bg-blue-300 checked:border-blue-800 checked:[--tglbg:theme(colors.blue.900)]"
           />
-        </div> -->
+        </div>
 
         <!-- Navigation links and theme toggle switch for smaller screens -->
         <div class="lg:hidden ml-4">
@@ -49,38 +47,38 @@
             <input
               type="checkbox"
               class="hidden"
-              onclick="my_modal_2.showModal()"
+              @click="mobileMenuRef?.showModal()"
             />
-            <dialog id="my_modal_2" class="modal">
+            <dialog id="my_modal_2" ref="mobileMenuRef" class="modal">
               <div class="modal-box">
                 <nav
                   class="flex flex-col gap-y-4 font-bold text-lg tracking-wide uppercase"
                 >
                   <NuxtLink to="#hero">Home</NuxtLink>
-                  <NuxtLink to="#about-me" class="hover:text-[#260b9caf]"
+                  <NuxtLink to="#about-me" class="hover:text-primary"
                     >About</NuxtLink
                   >
                   <NuxtLink to="#projects">Projects</NuxtLink>
-                  <NuxtLink to="#skills" class="hover:text-[#260b9caf]"
+                  <NuxtLink to="#skills" class="hover:text-primary"
                     >Capability</NuxtLink
                   >
-                  <NuxtLink to="#testimonials" class="hover:text-[#260b9caf]"
+                  <NuxtLink to="#testimonials" class="hover:text-primary"
                     >Testimonials</NuxtLink
                   >
                   <a
-                    class="btn bg-[#4e2edfaf] text-white"
+                    class="btn bg-secondary text-white"
                     href="mailto:evangelistaangelo38@gmail.com"
                   >
                     Say Hi
                     <img src="/icons/send.svg" alt="Send Icon" />
                   </a>
-                  <!-- <div class="ml-4">
+                  <div class="ml-4">
                     <input
                       type="checkbox"
                       v-model="isDarkTheme"
                       class="toggle theme-controller bg-amber-300 border-sky-400 [--tglbg:theme(colors.sky.500)] checked:bg-blue-300 checked:border-blue-800 checked:[--tglbg:theme(colors.blue.900)]"
                     />
-                  </div> -->
+                  </div>
                 </nav>
               </div>
               <form method="dialog" class="modal-backdrop">
@@ -110,9 +108,7 @@
         <slot />
       </div>
     </div>
-    <footer
-      class="footer footer-center p-10 bg-[#260b9caf] text-primary-content"
-    >
+    <footer class="footer footer-center p-10 bg-primary text-primary-content">
       <aside>
         <img class="h-20 w-auto" src="/logo/logo.png" alt="Logo" />
         <p class="font-bold">
@@ -122,39 +118,23 @@
         <p>Copyright © 2026 - All right reserved</p>
       </aside>
       <nav>
-        <div class="flex space-between gap-4">
-          <NuxtLink
-            to="https://www.facebook.com/angelo.evangelista.148/"
-            class="size-9 bg-black middle rounded-full z-40 hover:animate-spin"
-            target="_blank"
-            ><img src="/icons/facebook.svg" alt="Facebook"
-          /></NuxtLink>
-          <NuxtLink
-            to="https://www.instagram.com/evang81194/"
-            target="_blank"
-            class="flex-none size-9 bg-black middle rounded-full z-40 hover:animate-spin"
-            ><img src="/icons/instagram.svg" alt="Instagram"
-          /></NuxtLink>
-          <NuxtLink
-            to="https://www.linkedin.com/in/angelo-gabriel-evangelista-a6276222a/"
-            target="_blank"
-            class="size-9 bg-black middle rounded-full z-40 hover:animate-spin"
-            ><img src="/icons/linkedin.svg" alt="LinkedIn"
-          /></NuxtLink>
-          <NuxtLink
-            to="https://github.com/g-gelo"
-            target="_blank"
-            class="size-9 bg-black middle rounded-full z-40 hover:animate-spin"
-            ><img src="/icons/github.svg" alt="Github"
-          /></NuxtLink>
-        </div>
+        <SocialLinks />
       </nav>
     </footer>
   </div>
 </template>
 
 <script setup>
-//
+const colorMode = useColorMode();
+
+const isDarkTheme = computed({
+  get: () => colorMode.value === "dark",
+  set: (value) => {
+    colorMode.value = value ? "dark" : "light";
+  },
+});
+
+const mobileMenuRef = ref(null);
 </script>
 
 <style>

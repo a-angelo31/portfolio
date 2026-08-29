@@ -10,7 +10,7 @@
     <div>
       <button
         @click="showModal = true"
-        class="btn btn-active bg-[#260b9caf] text-white"
+        class="btn btn-active bg-primary text-white"
       >
         {{ buttonText }}
       </button>
@@ -23,10 +23,7 @@
         <h2 class="text-2xl font-bold">Notice</h2>
         <img src="/icons/wrench.svg" class="size-9" alt="Facebook" />
         <p>This feature is under development.</p>
-        <button
-          @click="showModal = false"
-          class="btn bg-[#260b9caf] text-white"
-        >
+        <button @click="showModal = false" class="btn bg-primary text-white">
           Close
         </button>
       </div>
@@ -35,8 +32,6 @@
 </template>
 
 <script setup>
-import { ref } from "vue";
-
 const props = defineProps({
   iconPath: {
     type: String,
@@ -50,10 +45,6 @@ const props = defineProps({
     type: String,
     required: true,
   },
-  link: {
-    type: String,
-    required: true,
-  },
   buttonText: {
     type: String,
     required: true,
@@ -64,9 +55,5 @@ const showModal = ref(false);
 </script>
 
 <style scoped>
-.middle {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+/* Uses global .middle utility from layout */
 </style>
