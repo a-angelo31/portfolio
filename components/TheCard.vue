@@ -1,8 +1,10 @@
 <template>
-  <div class="middle flex-col bg-white rounded-lg p-6 px-4 space-y-3 mx-10">
+  <div
+    class="middle flex-col bg-base-100 rounded-lg p-6 px-4 space-y-3 mx-10 shadow-lg"
+  >
     <div><img :src="iconPath" alt="Icon" class="size-20" /></div>
     <div>
-      <h1 class="text-2xl font-bold text-gray-800">{{ title }}</h1>
+      <h1 class="text-2xl font-bold text-base-content">{{ title }}</h1>
     </div>
     <div>
       <p class="text-center">{{ description }}</p>
@@ -19,8 +21,8 @@
       v-if="showModal"
       class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50"
     >
-      <div class="bg-white rounded-lg p-6 space-y-4 w-1/2 middle flex-col">
-        <h2 class="text-2xl font-bold">Notice</h2>
+      <div class="bg-base-100 rounded-lg p-6 space-y-4 w-1/2 middle flex-col">
+        <h2 class="text-2xl font-bold text-base-content">Notice</h2>
         <img src="/icons/wrench.svg" class="size-9" alt="Facebook" />
         <p>This feature is under development.</p>
         <button @click="showModal = false" class="btn bg-primary text-white">

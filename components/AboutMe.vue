@@ -5,7 +5,7 @@
     </div>
     <div class="flex-1">
       <div
-        class="card rounded-lg w-fit md:w-full bg-white text-primary-content mb-10 mx-5 sm:mb-10 right"
+        class="card rounded-lg w-fit md:w-full bg-base-100 text-base-content mb-10 mx-5 sm:mb-10 right shadow-lg"
       >
         <div class="card-body text-center">
           <h2
@@ -14,7 +14,7 @@
             {{ "< ABOUT ME />" }}
           </h2>
           <p
-            class="text-md text-gray-600 pb-2 leading-relaxed max-w-xs sm:max-w-md md:max-w-2xl md:text-xl border-b-2"
+            class="text-md text-base-content/70 pb-2 leading-relaxed max-w-xs sm:max-w-md md:max-w-2xl md:text-xl border-b-2"
           >
             Hello! I'm
             <strong class="font-semibold">Angelo Gabriel D. Evangelista</strong
@@ -33,7 +33,7 @@
             {{ "< Contact Information />" }}
           </h2>
           <div
-            class="text-md pb-4 text-gray-600 leading-relaxed max-w-xs sm:max-w-md md:max-w-2xl md:text-xl border-b-2 items-center"
+            class="text-md pb-4 text-base-content/70 leading-relaxed max-w-xs sm:max-w-md md:max-w-2xl md:text-xl border-b-2 items-center"
           >
             <div class="flex">
               <img
@@ -49,7 +49,7 @@
             </div>
           </div>
           <p
-            class="text-md pb-3 text-center text-gray-600 leading-relaxed max-w-xs sm:max-w-md md:max-w-2xl md:text-xl border-b-2 items-center"
+            class="text-md pb-3 text-center text-base-content/70 leading-relaxed max-w-xs sm:max-w-md md:max-w-2xl md:text-xl border-b-2 items-center"
           >
             I’m currently open to roles and opportunities where I can contribute
             my web design and front-end expertise. Let’s connect and create

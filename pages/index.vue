@@ -66,12 +66,12 @@
       </div>
     </div>
     <!-- What I Do -->
-    <div id="about-me" class="h-auto md:h-auto flex flex-col p-4 bg-light-bg">
+    <div id="about-me" class="h-auto md:h-auto flex flex-col p-4 bg-base-200">
       <div
         class="flex flex-col justify-center items-center mt-20 mb-10 sm:mb-24 sm:mt-20"
       >
         <h1
-          class="text-2xl md:text-4xl font-extrabold text-center text-dark-text left"
+          class="text-2xl md:text-4xl font-extrabold text-center text-base-content left"
         >
           "CHASE YOUR PASSION
         </h1>
@@ -109,10 +109,10 @@
     <!-- Sample Project -->
     <div
       id="projects"
-      class="h-auto bg-light-bg flex justify-center flex-col items-center"
+      class="h-auto bg-base-200 flex justify-center flex-col items-center"
     >
       <div class="font-bold text-4xl flex flex-col items-center mb-8 mt-10">
-        <h1 class="text-center text-dark-text left">SAMPLE</h1>
+        <h1 class="text-center text-base-content left">SAMPLE</h1>
         <h1 class="text-primary right">PROJECT</h1>
       </div>
       <div class="mb-10">
@@ -128,12 +128,12 @@
     <!-- Testimonial -->
     <div
       id="testimonials"
-      class="max-w-5xl mx-auto my-12 p-6 bg-gray-100 rounded-lg shadow-lg"
+      class="max-w-5xl mx-auto my-12 p-6 bg-base-200 rounded-lg shadow-lg"
     >
       <h2 class="text-4xl font-bold text-center text-primary mb-6 left">
         TESTIMONIALS
       </h2>
-      <p class="text-center text-gray-600 mb-8">
+      <p class="text-center text-base-content/70 mb-8">
         See what others have to say about my work!
       </p>
       <div>

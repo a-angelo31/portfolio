@@ -1,5 +1,5 @@
 <template>
-  <div class="max-w-4xl mx-auto my-10 h-auto bg-light-bg top">
+  <div class="max-w-4xl mx-auto my-10 h-auto bg-base-100 top">
     <div
       class="relative overflow-hidden"
       @mouseenter="pauseAutoPlay"
@@ -16,17 +16,19 @@
           :key="index"
           class="flex-none w-full p-6"
         >
-          <div class="bg-white shadow-md rounded-lg p-6">
+          <div class="bg-base-200 shadow-md rounded-lg p-6">
             <img
               v-if="testimonial.image"
               :src="testimonial.image"
               :alt="`${testimonial.author} testimonial`"
               class="w-3/5 h-3/5 object-contain mt-3 mx-auto"
             />
-            <p class="text-lg text-gray-700 mb-4">{{ testimonial.text }}</p>
+            <p class="text-lg text-base-content mb-4">{{ testimonial.text }}</p>
             <div class="text-right">
-              <p class="text-sm font-semibold">{{ testimonial.author }}</p>
-              <p class="text-sm text-gray-500">{{ testimonial.role }}</p>
+              <p class="text-sm font-semibold text-base-content">
+                {{ testimonial.author }}
+              </p>
+              <p class="text-sm text-base-content/60">{{ testimonial.role }}</p>
             </div>
           </div>
         </div>
@@ -35,11 +37,11 @@
       <button
         @click="prev"
         aria-label="Previous testimonial"
-        class="absolute top-1/2 transform -translate-y-1/2 left-0 bg-white rounded-full p-2 shadow-md hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500"
+        class="absolute top-1/2 transform -translate-y-1/2 left-0 bg-base-200 rounded-full p-2 shadow-md hover:bg-base-300 focus:outline-none focus:ring-2 focus:ring-primary"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          class="h-6 w-6 text-gray-700"
+          class="h-6 w-6 text-base-content"
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"
@@ -56,11 +58,11 @@
       <button
         @click="next"
         aria-label="Next testimonial"
-        class="absolute top-1/2 transform -translate-y-1/2 right-0 bg-white rounded-full p-2 shadow-md hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500"
+        class="absolute top-1/2 transform -translate-y-1/2 right-0 bg-base-200 rounded-full p-2 shadow-md hover:bg-base-300 focus:outline-none focus:ring-2 focus:ring-primary"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          class="h-6 w-6 text-gray-700"
+          class="h-6 w-6 text-base-content"
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"
@@ -81,10 +83,10 @@
         :key="index"
         @click="goToSlide(index)"
         :aria-label="`Go to testimonial ${index + 1}`"
-        class="mx-1 cursor-pointer h-2 w-2 rounded-full inline-block focus:outline-none focus:ring-2 focus:ring-blue-500"
+        class="mx-1 cursor-pointer h-2 w-2 rounded-full inline-block focus:outline-none focus:ring-2 focus:ring-primary"
         :class="{
-          'bg-blue-500': currentIndex === index,
-          'bg-gray-400': currentIndex !== index,
+          'bg-primary': currentIndex === index,
+          'bg-base-content/30': currentIndex !== index,
         }"
       ></button>
     </div>
