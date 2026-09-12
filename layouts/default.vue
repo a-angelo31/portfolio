@@ -108,7 +108,7 @@
         <slot />
       </div>
     </div>
-    <footer class="footer footer-center p-10 bg-primary text-primary-content">
+    <footer class="footer footer-center p-10 bg-primary text-gray-300">
       <aside>
         <img class="h-20 w-auto" src="/logo/logo.png" alt="Logo" />
         <p class="font-bold">

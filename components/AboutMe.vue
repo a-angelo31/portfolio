@@ -9,7 +9,7 @@
       >
         <div class="card-body text-center">
           <h2
-            class="card-title font-bold text-4xl justify-center text-secondary"
+            class="card-title font-bold text-4xl justify-center text-secondary dark:text-secondary-light"
           >
             {{ "< ABOUT ME />" }}
           </h2>
@@ -29,7 +29,9 @@
             motivates me. I’m always learning, experimenting, and refining my
             craft to build digital experiences that leave a lasting impression.
           </p>
-          <h2 class="text-2xl font-medium text-secondary">
+          <h2
+            class="text-2xl font-medium text-secondary dark:text-secondary-light"
+          >
             {{ "< Contact Information />" }}
           </h2>
           <div

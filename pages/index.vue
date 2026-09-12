@@ -30,11 +30,9 @@
       <div class="interactive"></div>
 
       <div class="flex-1 flex flex-col justify-center p-6 text-left m-14">
-        <h1 class="text-4xl font-gideon font-bold text-gray-300 sm:text-8xl">
-          I Am
-        </h1>
+        <h1 class="font-gideon font-bold text-gray-300 sm:text-8xl">I Am</h1>
         <h1
-          class="text-6xl font-gideon font-extrabold text-white mt-6 tracking-wide"
+          class="text-5xl md:text-4xl font-extrabold font-gideon text-gray-300"
         >
           Angelo Gabriel
         </h1>
@@ -76,7 +74,7 @@
           "CHASE YOUR PASSION
         </h1>
         <h1
-          class="text-2xl md:text-4xl font-extrabold text-center text-primary right"
+          class="text-2xl md:text-4xl font-extrabold text-center text-primary dark:text-primary-light right"
         >
           IN YOUR OWN FASHION"
         </h1>
@@ -113,7 +111,7 @@
     >
       <div class="font-bold text-4xl flex flex-col items-center mb-8 mt-10">
         <h1 class="text-center text-base-content left">SAMPLE</h1>
-        <h1 class="text-primary right">PROJECT</h1>
+        <h1 class="text-primary dark:text-primary-light right">PROJECT</h1>
       </div>
       <div class="mb-10">
         <ProjectSample />
@@ -130,7 +128,9 @@
       id="testimonials"
       class="max-w-5xl mx-auto my-12 p-6 bg-base-200 rounded-lg shadow-lg"
     >
-      <h2 class="text-4xl font-bold text-center text-primary mb-6 left">
+      <h2
+        class="text-4xl font-bold text-center text-primary dark:text-primary-light mb-6 left"
+      >
         TESTIMONIALS
       </h2>
       <p class="text-center text-base-content/70 mb-8">

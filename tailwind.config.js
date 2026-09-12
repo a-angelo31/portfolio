@@ -3,7 +3,7 @@ module.exports = {
   daisyui: {
     themes: ["light", "dark"],
   },
-  darkMode: "class", // or 'media' if you prefer using the user's system preference
+  darkMode: ["class", '[data-theme="dark"]'],
   content: [
     "./components/**/*.{vue,js}",
     "./layouts/**/*.{vue,js}",
@@ -33,6 +33,8 @@ module.exports = {
         "light-bg": "#f5eeed",
         "dark-text": "#000000af",
         "light-green": "#C7FFB2",
+        "primary-light": "#a78bfa",
+        "secondary-light": "#c4b5fd",
       },
       fontFamily: {
         oswald: ["Oswald", "sans-serif"],
