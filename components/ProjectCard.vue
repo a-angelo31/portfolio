@@ -4,12 +4,14 @@
     @click="$emit('openModal')"
   >
     <!-- Thumbnail Image with Hover Preview Overlay -->
-    <figure class="relative aspect-video w-full overflow-hidden bg-base-300">
+    <figure
+      class="relative aspect-video w-full overflow-hidden bg-base-200 flex items-center justify-center"
+    >
       <img
         :key="projectData.id + '-' + projectData.imageSrc"
         :src="projectData.imageSrc"
         :alt="projectData.altText"
-        class="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
+        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
         loading="lazy"
       />
 

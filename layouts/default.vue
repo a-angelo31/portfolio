@@ -17,11 +17,11 @@
             >Projects</NuxtLink
           >
           <NuxtLink to="#about-me" class="hover:text-primary">About</NuxtLink>
-          <NuxtLink to="#skills" class="hover:text-primary"
-            >Capability</NuxtLink
-          >
           <NuxtLink to="#testimonials" class="hover:text-primary"
             >Testimonials</NuxtLink
+          >
+          <NuxtLink to="#skills" class="hover:text-primary"
+            >Capability</NuxtLink
           >
           <a
             class="btn bg-secondary text-white"
@@ -55,15 +55,15 @@
                   class="flex flex-col gap-y-4 font-bold text-lg tracking-wide uppercase"
                 >
                   <NuxtLink to="#hero">Home</NuxtLink>
+                  <NuxtLink to="#projects">Projects</NuxtLink>
                   <NuxtLink to="#about-me" class="hover:text-primary"
                     >About</NuxtLink
                   >
-                  <NuxtLink to="#projects">Projects</NuxtLink>
-                  <NuxtLink to="#skills" class="hover:text-primary"
-                    >Capability</NuxtLink
-                  >
                   <NuxtLink to="#testimonials" class="hover:text-primary"
                     >Testimonials</NuxtLink
+                  >
+                  <NuxtLink to="#skills" class="hover:text-primary"
+                    >Capability</NuxtLink
                   >
                   <a
                     class="btn bg-secondary text-white"
