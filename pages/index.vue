@@ -107,13 +107,13 @@
     <!-- Sample Project -->
     <div
       id="projects"
-      class="h-auto bg-base-200 flex justify-center flex-col items-center"
+      class="h-auto bg-base-200 flex justify-center flex-col items-center py-16 px-4 sm:px-6 lg:px-8 w-full overflow-hidden"
     >
-      <div class="font-bold text-4xl flex flex-col items-center mb-8 mt-10">
+      <div class="font-bold text-4xl flex flex-col items-center mb-8">
         <h1 class="text-center text-base-content left">SAMPLE</h1>
         <h1 class="text-primary dark:text-primary-light right">PROJECT</h1>
       </div>
-      <div class="mb-10">
+      <div class="mb-6 w-full">
         <ProjectSample />
       </div>
     </div>
