@@ -7,12 +7,6 @@
       ><img src="/icons/facebook.svg" alt="Facebook"
     /></NuxtLink>
     <NuxtLink
-      to="https://www.instagram.com/evang81194/"
-      target="_blank"
-      class="flex-none size-9 bg-black middle rounded-full z-40 hover:animate-spin"
-      ><img src="/icons/instagram.svg" alt="Instagram"
-    /></NuxtLink>
-    <NuxtLink
       to="https://www.linkedin.com/in/angelo-gabriel-evangelista-a6276222a/"
       target="_blank"
       class="size-9 bg-black middle rounded-full z-40 hover:animate-spin"

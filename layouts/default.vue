@@ -112,8 +112,7 @@
       <aside>
         <img class="h-20 w-auto" src="/logo/logo.png" alt="Logo" />
         <p class="font-bold">
-          Angelo Gabriel D. Evangelista <br />
-          Created By Me 💘
+          Designed & Built by Angelo Gabriel D. Evangelista
         </p>
         <p>Copyright © 2026 - All right reserved</p>
       </aside>

@@ -59,7 +59,6 @@
   </div>
 </template>
 
-
 <script setup>
 const { initScrollAnimations } = useScrollAnimation();
 
@@ -94,7 +93,7 @@ const projects = ref([
     id: "capstone",
     imageSrc: "/projects/capstone/capstone-project.png",
     altText: "Capstone Thesis Project",
-    githubLink: "https://github.com/g-gelo/first-thesis-trial",
+    githubLink: "https://github.com/a-angelo31/first-thesis-trial",
     cardTitle: "Capstone Thesis Project",
     categories: ["Personal Projects"],
     description:
@@ -105,7 +104,7 @@ const projects = ref([
     id: "ojt",
     imageSrc: "/projects/ojt/ojt-project.png",
     altText: "OJT Project",
-    githubLink: "https://github.com/g-gelo/hospital_project",
+    githubLink: "https://github.com/a-angelo31/hospital_project",
     cardTitle: "OJT Project",
     categories: ["Personal Projects", "Web Design"],
     description:
@@ -116,7 +115,7 @@ const projects = ref([
     id: "portfolio",
     imageSrc: "/projects/portfolio/portfolio.png",
     altText: "My Portfolio",
-    githubLink: "https://github.com/g-gelo/portfolio",
+    githubLink: "https://github.com/a-angelo31/portfolio",
     cardTitle: "My Portfolio",
     categories: ["Personal Projects", "Web Design"],
     description:
@@ -193,4 +192,3 @@ onBeforeUnmount(() => {
   pointer-events: none;
 }
 </style>
-

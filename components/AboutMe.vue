@@ -46,8 +46,8 @@
               <span class="mr-4">Dasmariñas City, Cavite</span>
             </div>
             <div class="flex">
-              <img src="/icons/phone.svg" alt="Phone Icon" class="w-5 mr-2" />
-              <span>0970-164-0723</span>
+              <img src="/icons/mail.svg" alt="Mail Icon" class="w-5 mr-2" />
+              <span>evangelistaangelo38@gmail.com</span>
             </div>
           </div>
           <p
