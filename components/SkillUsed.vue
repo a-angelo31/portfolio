@@ -8,7 +8,7 @@
     </div>
     <div class="middle flex-col">
       <h1 class="font-bold text-3xl text-white top">EXPERTISE</h1>
-      <div class="flex p-6 space-x-6 top">
+      <div class="flex flex-wrap justify-center gap-6 p-6 top">
         <NuxtLink to="https://www.w3schools.com/html/" target="_blank">
           <img
             src="/skills/html.svg"
@@ -27,15 +27,6 @@
           <span class="block text-center text-white">Tailwind</span>
         </NuxtLink>
 
-        <NuxtLink to="https://vuejs.org" target="_blank">
-          <img
-            src="/skills/vue.svg"
-            class="w-20 h-20 transition transform hover:-translate-y-2 hover:rotate-45"
-            alt="Vue 3"
-          />
-          <span class="block text-center text-white">Vue 3</span>
-        </NuxtLink>
-
         <NuxtLink to="https://nuxt.com" target="_blank">
           <img
             src="/skills/nuxt.svg"
@@ -43,6 +34,69 @@
             alt="Nuxt 3"
           />
           <span class="block text-center text-white">Nuxt 3</span>
+        </NuxtLink>
+
+        <NuxtLink to="https://www.duda.co/" target="_blank">
+          <img
+            src="/skills/Duda.svg"
+            class="w-20 h-20 transition transform hover:-translate-y-2 hover:rotate-45"
+            alt="Duda"
+          />
+          <span class="block text-center text-white">Duda</span>
+        </NuxtLink>
+
+        <NuxtLink
+          to="https://search.google.com/search-console/about"
+          target="_blank"
+          class="flex flex-col items-center"
+        >
+          <img
+            src="/skills/GSC.svg"
+            class="w-20 h-20 transition transform hover:-translate-y-2 hover:rotate-45"
+            alt="Google Search Console"
+          />
+          <span class="block text-center text-white"
+            >Google Search Console</span
+          >
+        </NuxtLink>
+
+        <NuxtLink
+          to="http://tagmanager.google.com/"
+          target="_blank"
+          class="flex flex-col items-center"
+        >
+          <img
+            src="/skills/GTM.svg"
+            class="w-20 h-20 transition transform hover:-translate-y-2 hover:rotate-45"
+            alt="Google Tag Manager"
+          />
+          <span class="block text-center text-white">Google Tag Manager</span>
+        </NuxtLink>
+
+        <NuxtLink
+          to="https://developers.google.com/analytics"
+          target="_blank"
+          class="flex flex-col items-center"
+        >
+          <img
+            src="/skills/GA.svg"
+            class="w-20 h-20 transition transform hover:-translate-y-2 hover:rotate-45"
+            alt="Google Analytics"
+          />
+          <span class="block text-center text-white">Google Analytics</span>
+        </NuxtLink>
+
+        <NuxtLink
+          to="https://developers.google.com/analytics"
+          target="_blank"
+          class="flex flex-col items-center"
+        >
+          <img
+            src="/skills/ScreamingFrog.png"
+            class="w-20 h-20 transition transform hover:-translate-y-2 hover:rotate-45"
+            alt="Screaming Frog"
+          />
+          <span class="block text-center text-white">Screaming Frog</span>
         </NuxtLink>
       </div>
 
@@ -83,16 +137,6 @@
                 alt="Quasar"
               />
               <span class="block text-center text-white">Quasar</span>
-            </NuxtLink>
-          </div>
-          <div>
-            <NuxtLink to="https://laravel.com/docs" target="_blank">
-              <img
-                src="/skills/laravel.svg"
-                class="w-20 h-20 transition transform hover:-translate-y-2 hover:rotate-45"
-                alt="Laravel"
-              />
-              <span class="block text-center text-white">Laravel</span>
             </NuxtLink>
           </div>
           <div>

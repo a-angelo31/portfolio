@@ -18,16 +18,16 @@
           >
             Hello! I'm
             <strong class="font-semibold">Angelo Gabriel D. Evangelista</strong
-            >, a Web Designer and Front-End Developer based in the Philippines.
-            I love
+            >, a Web Designer and SEO Specialist based in the Philippines. I
+            love
             <strong class="font-semibold"
-              >turning ideas into clean, responsive, and visually engaging
-              websites</strong
+              >turning ideas into clean, responsive websites while optimizing
+              them to perform and rank well</strong
             >
-            using Duda, WordPress, and modern web technologies. Creating designs
-            that feel good to use and look great across all devices is what
-            motivates me. I’m always learning, experimenting, and refining my
-            craft to build digital experiences that leave a lasting impression.
+            using Duda, WordPress, and modern SEO practices. Creating designs
+            that feel good to use and are built to be found is what motivates
+            me. I’m always learning, experimenting, and refining my craft to
+            build digital experiences that leave a lasting impression.
           </p>
           <h2
             class="text-2xl font-medium text-secondary dark:text-secondary-light"
@@ -53,9 +53,9 @@
           <p
             class="text-md pb-3 text-center text-base-content/70 leading-relaxed max-w-xs sm:max-w-md md:max-w-2xl md:text-xl border-b-2 items-center"
           >
-            I’m currently open to roles and opportunities where I can contribute
-            my web design and front-end expertise. Let’s connect and create
-            something impactful together!
+            I'm currently open to roles and opportunities where I can contribute
+            my web design and SEO expertise. Let's connect and create something
+            impactful together!
           </p>
 
           <div class="card-actions justify-center">

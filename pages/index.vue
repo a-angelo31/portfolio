@@ -30,14 +30,19 @@
       <div class="interactive"></div>
 
       <div class="flex-1 flex flex-col justify-center p-6 text-left m-14">
-        <h1 class="font-gideon font-bold text-gray-300 sm:text-8xl">I Am</h1>
-        <h1
+        <h1 class="font-gideon font-bold text-gray-300">
+          <span class="block text-2xl sm:text-6xl font-normal">I Am</span>
+          <span class="block text-5xl sm:text-7xl font-bold"
+            >Angelo Gabriel</span
+          >
+        </h1>
+        <!-- <h1
           class="text-5xl md:text-4xl font-extrabold font-gideon text-gray-300"
         >
           Angelo Gabriel
-        </h1>
+        </h1> -->
         <h2 class="mt-3 text-lg md:text-xl text-white tracking-wide font-della">
-          Web Designer & Front-End Developer
+          Web designer and SEO specialist
         </h2>
         <div class="flex flex-wrap gap-4 mt-6">
           <SocialLinks />

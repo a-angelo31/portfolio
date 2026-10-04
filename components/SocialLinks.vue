@@ -13,7 +13,7 @@
       ><img src="/icons/linkedin.svg" alt="LinkedIn"
     /></NuxtLink>
     <NuxtLink
-      to="https://github.com/g-gelo"
+      to="https://github.com/a-angelo31"
       target="_blank"
       class="size-9 bg-black middle rounded-full z-40 hover:animate-spin"
       ><img src="/icons/github.svg" alt="Github"
