@@ -29,11 +29,11 @@
             me. I’m always learning, experimenting, and refining my craft to
             build digital experiences that leave a lasting impression.
           </p>
-          <h2
+          <h3
             class="text-2xl font-medium text-secondary dark:text-secondary-light"
           >
             {{ "< Contact Information />" }}
-          </h2>
+          </h3>
           <div
             class="text-md pb-4 text-base-content/70 leading-relaxed max-w-xs sm:max-w-md md:max-w-2xl md:text-xl border-b-2 items-center"
           >

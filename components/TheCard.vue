@@ -4,7 +4,7 @@
   >
     <div><img :src="iconPath" alt="Icon" class="size-20" /></div>
     <div>
-      <h1 class="text-2xl font-bold text-base-content">{{ title }}</h1>
+      <h3 class="text-2xl font-bold text-base-content">{{ title }}</h3>
     </div>
     <div>
       <p class="text-center">{{ description }}</p>

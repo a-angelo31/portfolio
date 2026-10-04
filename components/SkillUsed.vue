@@ -1,13 +1,15 @@
 <template>
   <div class="h-auto">
     <div class="text-4xl text-white font-bold middle">
-      <div class="mt-16 flex gap-2 mb-6">
-        <h1 class="left">TECH</h1>
-        <h1 class="right">STACK</h1>
+      <div class="mt-16 flex justify-center gap-2 mb-6">
+        <h2 class="text-4xl text-white font-bold text-center">
+          <span class="left">TECH</span> <br />
+          <span class="right text-[#232b37]">STACK</span>
+        </h2>
       </div>
     </div>
     <div class="middle flex-col">
-      <h1 class="font-bold text-3xl text-white top">EXPERTISE</h1>
+      <h3 class="font-bold text-3xl text-white top">EXPERTISE</h3>
       <div class="flex flex-wrap justify-center gap-6 p-6 top">
         <NuxtLink to="https://www.w3schools.com/html/" target="_blank">
           <img
@@ -101,7 +103,7 @@
       </div>
 
       <div class="middle flex-col">
-        <h1 class="font-bold text-3xl text-white m-4 top">OTHERS</h1>
+        <h3 class="font-bold text-3xl text-white m-4 top">OTHERS</h3>
         <div class="flex flex-wrap gap-4 middle m-4 mb-10 top">
           <div>
             <NuxtLink

@@ -73,16 +73,13 @@
       <div
         class="flex flex-col justify-center items-center mt-20 mb-10 sm:mb-24 sm:mt-20"
       >
-        <h1
-          class="text-2xl md:text-4xl font-extrabold text-center text-base-content left"
-        >
-          "CHASE YOUR PASSION
-        </h1>
-        <h1
-          class="text-2xl md:text-4xl font-extrabold text-center text-primary dark:text-primary-light right"
-        >
-          IN YOUR OWN FASHION"
-        </h1>
+        <h2 class="text-2xl md:text-4xl font-extrabold text-center">
+          <span class="block text-base-content left">"CHASE YOUR PASSION</span>
+
+          <span class="block text-primary dark:text-primary-light right"
+            >IN YOUR OWN FASHION"</span
+          >
+        </h2>
       </div>
       <div class="flex flex-col space-y-10 sm:flex-row sm:space-y-0 mb-10 top">
         <TheCard
@@ -115,8 +112,12 @@
       class="h-auto bg-base-200 flex justify-center flex-col items-center py-16 px-4 sm:px-6 lg:px-8 w-full overflow-hidden"
     >
       <div class="font-bold text-4xl flex flex-col items-center mb-8">
-        <h1 class="text-center text-base-content left">SAMPLE</h1>
-        <h1 class="text-primary dark:text-primary-light right">PROJECT</h1>
+        <h2 class="text-center font-bold text-4xl">
+          <span class="block text-base-content left">SAMPLE</span>
+          <span class="block text-primary dark:text-primary-light right"
+            >PROJECT</span
+          >
+        </h2>
       </div>
       <div class="mb-6 w-full">
         <ProjectSample />
