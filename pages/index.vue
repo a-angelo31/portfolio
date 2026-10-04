@@ -89,45 +89,6 @@
     <div class="flex justify-center items-center md:mb-0 md:mt-0 bg-primary">
       <AboutMe />
     </div>
-    <!-- What I Do -->
-    <div class="h-auto md:h-auto flex flex-col p-4 bg-base-200">
-      <div
-        class="flex flex-col justify-center items-center mt-20 mb-10 sm:mb-24 sm:mt-20"
-      >
-        <h2 class="text-2xl md:text-4xl font-extrabold text-center">
-          <span class="block text-base-content left">"CHASE YOUR PASSION</span>
-
-          <span class="block text-primary dark:text-primary-light right"
-            >IN YOUR OWN FASHION"</span
-          >
-        </h2>
-      </div>
-      <div class="flex flex-col space-y-10 sm:flex-row sm:space-y-0 mb-10 top">
-        <TheCard
-          iconPath="/icons/book.svg"
-          title="Reading"
-          description="Medium offers diverse articles, from motivation to programming insights, enriching my reading experience."
-          buttonText="View Link"
-        />
-        <TheCard
-          iconPath="/icons/music.svg"
-          title="Music"
-          description="I love listening to music. I don't have a specific genre that I prefer; the only music genre that I hate is the music that I don't listen to."
-          buttonText="View Link"
-        />
-        <TheCard
-          iconPath="/icons/writing.svg"
-          title="Writing"
-          description="Writing down my thoughts process, especially in the morning, helps me stay on track and achieve my goals."
-          buttonText="View Link"
-        />
-      </div>
-    </div>
-    <!-- Skills Overview -->
-    <div id="skills" class="bg-primary">
-      <SkillUsed />
-    </div>
-
     <!-- Testimonial -->
     <div
       id="testimonials"
@@ -144,6 +105,44 @@
       <div>
         <TheTestimonial />
       </div>
+    </div>
+  </div>
+  <!-- Skills Overview -->
+  <div id="skills" class="bg-primary">
+    <SkillUsed />
+  </div>
+  <!-- What I Do -->
+  <div class="h-auto md:h-auto flex flex-col p-4 bg-base-200">
+    <div
+      class="flex flex-col justify-center items-center mt-20 mb-10 sm:mb-24 sm:mt-20"
+    >
+      <h2 class="text-2xl md:text-4xl font-extrabold text-center">
+        <span class="block text-base-content left">"CHASE YOUR PASSION</span>
+
+        <span class="block text-primary dark:text-primary-light right"
+          >IN YOUR OWN FASHION"</span
+        >
+      </h2>
+    </div>
+    <div class="flex flex-col space-y-10 sm:flex-row sm:space-y-0 mb-10 top">
+      <TheCard
+        iconPath="/icons/book.svg"
+        title="Reading"
+        description="Medium offers diverse articles, from motivation to programming insights, enriching my reading experience."
+        buttonText="View Link"
+      />
+      <TheCard
+        iconPath="/icons/music.svg"
+        title="Music"
+        description="I love listening to music. I don't have a specific genre that I prefer; the only music genre that I hate is the music that I don't listen to."
+        buttonText="View Link"
+      />
+      <TheCard
+        iconPath="/icons/writing.svg"
+        title="Writing"
+        description="Writing down my thoughts process, especially in the morning, helps me stay on track and achieve my goals."
+        buttonText="View Link"
+      />
     </div>
   </div>
 </template>
