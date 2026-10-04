@@ -3,7 +3,7 @@
     <Transition name="modal-fade">
       <div
         v-if="project"
-        class="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-black/75 backdrop-blur-sm overflow-y-auto"
+        class="fixed inset-0 z-[9999] flex items-center justify-center p-4 sm:p-6 bg-black/75 backdrop-blur-sm overflow-y-auto"
         @click.self="$emit('close')"
         role="dialog"
         aria-modal="true"
@@ -24,7 +24,9 @@
           <!-- Scrollable Content Area -->
           <div class="overflow-y-auto flex-1">
             <!-- Full Project Image (Full View Uncropped) -->
-            <div class="relative w-full bg-base-200/70 flex items-center justify-center overflow-hidden p-3 sm:p-4 border-b border-base-300">
+            <div
+              class="relative w-full bg-base-200/70 flex items-center justify-center overflow-hidden p-3 sm:p-4 border-b border-base-300"
+            >
               <img
                 :key="project.imageSrc"
                 :src="project.imageSrc"
@@ -54,7 +56,9 @@
               </h3>
 
               <!-- Full Description -->
-              <div class="text-base-content/80 text-base leading-relaxed space-y-3 mb-6">
+              <div
+                class="text-base-content/80 text-base leading-relaxed space-y-3 mb-6"
+              >
                 <p>{{ project.description }}</p>
               </div>
 
@@ -107,9 +111,9 @@
                     />
                   </svg>
                   <span>{{
-                    project.githubLink.includes('github.com')
-                      ? 'View on GitHub'
-                      : 'Visit Live Website'
+                    project.githubLink.includes("github.com")
+                      ? "View on GitHub"
+                      : "Visit Live Website"
                   }}</span>
                 </a>
 
@@ -118,7 +122,9 @@
                   class="flex items-center gap-2 text-sm text-base-content/70 bg-base-200 py-2 px-3.5 rounded-lg"
                 >
                   <span>🔒</span>
-                  <span class="font-medium">Client Confidential (Protected under NDA)</span>
+                  <span class="font-medium"
+                    >Client Confidential (Protected under NDA)</span
+                  >
                 </div>
 
                 <button

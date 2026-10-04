@@ -13,10 +13,10 @@
         <!-- Navigation links for larger screens -->
         <div class="hidden lg:flex text-white gap-4 font-bold items-center">
           <NuxtLink to="#hero" class="hover:text-primary">Home</NuxtLink>
-          <NuxtLink to="#about-me" class="hover:text-primary">About</NuxtLink>
           <NuxtLink to="#projects" class="hover:text-primary"
             >Projects</NuxtLink
           >
+          <NuxtLink to="#about-me" class="hover:text-primary">About</NuxtLink>
           <NuxtLink to="#skills" class="hover:text-primary"
             >Capability</NuxtLink
           >

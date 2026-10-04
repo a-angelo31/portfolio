@@ -1,5 +1,5 @@
 <template>
-  <div class="h-auto md:flex md:my-10 md:gap-4 lg:gap-10 md:m-8">
+  <div class="h-auto md:flex md:my-10 md:gap-4 lg:gap-10 md:m-8" id="about-me">
     <div class="flex justify-center items-center flex-1 my-10 left">
       <img src="/img/picq.png" alt="Gelo" class="w-80 md:w-96 lg:w-96" />
     </div>

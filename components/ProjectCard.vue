@@ -17,7 +17,9 @@
       <div
         class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none"
       >
-        <span class="btn btn-sm bg-base-100/90 text-base-content shadow-lg border-0 gap-2 font-medium">
+        <span
+          class="btn btn-sm bg-base-100/90 text-base-content shadow-lg border-0 gap-2 font-medium"
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             class="h-4 w-4 text-primary"
@@ -73,7 +75,9 @@
         </h3>
 
         <!-- Short Description (Line clamped to keep card compact) -->
-        <p class="text-base-content/75 text-xs sm:text-sm leading-relaxed line-clamp-3">
+        <p
+          class="text-base-content/75 text-xs sm:text-sm leading-relaxed line-clamp-3"
+        >
           {{ projectData.description }}
         </p>
       </div>
@@ -83,7 +87,7 @@
         <!-- Tech Stack Tags -->
         <div class="flex flex-wrap items-center gap-1.5">
           <span
-            v-for="(badge, index) in (projectData.badges || [])"
+            v-for="(badge, index) in projectData.badges || []"
             :key="index"
             class="badge badge-sm py-2 px-2.5 text-[11px] font-medium"
             :class="[
@@ -127,7 +131,11 @@
             @click.stop
             :aria-label="`Open external link for ${projectData.cardTitle}`"
           >
-            <span>{{ projectData.githubLink.includes('github.com') ? 'GitHub' : 'Live Site' }}</span>
+            <span>{{
+              projectData.githubLink.includes("github.com")
+                ? "GitHub"
+                : "Live Site"
+            }}</span>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               class="h-3.5 w-3.5"

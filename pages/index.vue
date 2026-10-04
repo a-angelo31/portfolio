@@ -68,8 +68,29 @@
         />
       </div>
     </div>
+    <!-- Sample Project -->
+    <div
+      id="projects"
+      class="h-auto bg-base-200 flex justify-center flex-col items-center py-16 px-4 sm:px-6 lg:px-8 w-full overflow-hidden"
+    >
+      <div class="font-bold text-4xl flex flex-col items-center mb-8">
+        <h2 class="text-center font-bold text-4xl">
+          <span class="block text-base-content left">SAMPLE</span>
+          <span class="block text-primary dark:text-primary-light right"
+            >PROJECT</span
+          >
+        </h2>
+      </div>
+      <div class="mb-6 w-full">
+        <ProjectSample />
+      </div>
+    </div>
+    <!-- About Me -->
+    <div class="flex justify-center items-center md:mb-0 md:mt-0 bg-primary">
+      <AboutMe />
+    </div>
     <!-- What I Do -->
-    <div id="about-me" class="h-auto md:h-auto flex flex-col p-4 bg-base-200">
+    <div class="h-auto md:h-auto flex flex-col p-4 bg-base-200">
       <div
         class="flex flex-col justify-center items-center mt-20 mb-10 sm:mb-24 sm:mt-20"
       >
@@ -102,28 +123,6 @@
         />
       </div>
     </div>
-    <!-- About Me -->
-    <div class="flex justify-center items-center md:mb-0 md:mt-0 bg-primary">
-      <AboutMe />
-    </div>
-    <!-- Sample Project -->
-    <div
-      id="projects"
-      class="h-auto bg-base-200 flex justify-center flex-col items-center py-16 px-4 sm:px-6 lg:px-8 w-full overflow-hidden"
-    >
-      <div class="font-bold text-4xl flex flex-col items-center mb-8">
-        <h2 class="text-center font-bold text-4xl">
-          <span class="block text-base-content left">SAMPLE</span>
-          <span class="block text-primary dark:text-primary-light right"
-            >PROJECT</span
-          >
-        </h2>
-      </div>
-      <div class="mb-6 w-full">
-        <ProjectSample />
-      </div>
-    </div>
-
     <!-- Skills Overview -->
     <div id="skills" class="bg-primary">
       <SkillUsed />
