@@ -150,28 +150,34 @@
 
 <script setup>
 useHead({
-  title: "Angelo's Portfolio",
+  title: "Angelo Gabriel Evangelista | Web Designer & SEO Specialist",
   meta: [
     {
       name: "description",
       content:
-        "Angelo Gabriel D. Evangelista — Web Designer and Front-End Developer based in the Philippines. Specializing in clean, responsive, and visually engaging websites using Duda, WordPress, Vue, and Nuxt.",
+        "Angelo Gabriel D. Evangelista — Web Designer & SEO Specialist in the Philippines, building responsive, SEO-optimized websites with Duda, WordPress, Vue & Nuxt.",
     },
-    { property: "og:title", content: "Angelo's Portfolio" },
+    {
+      property: "og:title",
+      content: "Angelo Gabriel Evangelista | Web Designer & SEO Specialist",
+    },
     {
       property: "og:description",
       content:
-        "Web Designer & Front-End Developer crafting clean, responsive, and visually engaging digital experiences.",
+        "Angelo Gabriel D. Evangelista — Web Designer & SEO Specialist in the Philippines, building responsive, SEO-optimized websites with Duda, WordPress, Vue & Nuxt.",
     },
     { property: "og:type", content: "website" },
-    { property: "og:url", content: "https://g-gelo.github.io/portfolio" },
+    { property: "og:url", content: "https://gelo-dev.vercel.app" },
     { property: "og:image", content: "/img/Me-2.png" },
     { name: "twitter:card", content: "summary_large_image" },
-    { name: "twitter:title", content: "Angelo's Portfolio" },
+    {
+      name: "twitter:title",
+      content: "Angelo Gabriel Evangelista | Web Designer & SEO Specialist",
+    },
     {
       name: "twitter:description",
       content:
-        "Web Designer & Front-End Developer crafting clean, responsive, and visually engaging digital experiences.",
+        "Angelo Gabriel D. Evangelista — Web Designer & SEO Specialist in the Philippines, building responsive, SEO-optimized websites with Duda, WordPress, Vue & Nuxt.",
     },
     { name: "twitter:image", content: "/img/Me-2.png" },
   ],
