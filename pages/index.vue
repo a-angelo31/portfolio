@@ -124,24 +124,23 @@
         >
       </h2>
     </div>
-    <div class="flex flex-col space-y-10 sm:flex-row sm:space-y-0 mb-10 top">
+    <div
+      class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-10 top w-full max-w-6xl mx-auto items-stretch px-4 sm:px-6"
+    >
       <TheCard
-        iconPath="/icons/book.svg"
-        title="Reading"
-        description="Medium offers diverse articles, from motivation to programming insights, enriching my reading experience."
-        buttonText="View Link"
+        iconPath="/icons/dumbbell.svg"
+        title="Workout"
+        description="Staying active keeps me focused, energized, and disciplined, and it carries over into how I work."
       />
       <TheCard
         iconPath="/icons/music.svg"
         title="Music"
-        description="I love listening to music. I don't have a specific genre that I prefer; the only music genre that I hate is the music that I don't listen to."
-        buttonText="View Link"
+        description="I enjoy all kinds of music. It keeps me relaxed and focused while I work."
       />
       <TheCard
         iconPath="/icons/writing.svg"
         title="Writing"
         description="Writing down my thoughts process, especially in the morning, helps me stay on track and achieve my goals."
-        buttonText="View Link"
       />
     </div>
   </div>
