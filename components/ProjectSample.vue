@@ -68,6 +68,28 @@ const selectedProject = ref(null);
 
 const projects = ref([
   {
+    id: "atlas-4x4",
+    imageSrc: "/projects/portfolio/Atlas4x4.png",
+    altText: "Atlas 4X4 Touring & Mechanical",
+    githubLink: "https://www.atlas4x4.com.au/",
+    cardTitle: "Atlas 4X4 Touring & Mechanical",
+    categories: ["Web Design"],
+    description:
+      "A responsive website for Atlas 4X4 Touring & Mechanical, a 4x4 workshop in Tweed Heads, Australia. The site presents seven core services, from logbook servicing and suspension to dual battery systems, along with complete vehicle builds, and gives visitors clear paths to call or request a quote. Built with Duda.",
+    badges: ["Duda", "Responsive Design"],
+  },
+  {
+    id: "goat-collective",
+    imageSrc: "/projects/portfolio/GoatCollective.png",
+    altText: "Goat Collective",
+    githubLink: "https://www.goatcollective.au/",
+    cardTitle: "Goat Collective",
+    categories: ["Web Design"],
+    description:
+      "A responsive website for GOAT Collective, a licensed renovation and trade services provider in Australia’s Northern Rivers. Each of the eight trade services features a custom goat icon that ties the design to the business name, with dedicated service and location pages to help clients find the right trade and request a quote. Built with Duda.",
+    badges: ["Duda", "Responsive Design"],
+  },
+  {
     id: "ox-plumbing",
     imageSrc: "/projects/portfolio/OxPlumbing.png",
     altText: "Ox Plumbing",
