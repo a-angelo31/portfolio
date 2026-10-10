@@ -89,7 +89,7 @@
         </NuxtLink>
 
         <NuxtLink
-          to="https://developers.google.com/analytics"
+          to="https://www.screamingfrog.co.uk"
           target="_blank"
           class="flex flex-col items-center"
         >
