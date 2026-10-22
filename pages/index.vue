@@ -63,7 +63,7 @@
       >
         <img
           src="/img/Me-2.png"
-          alt="Angelo Gabriel D. Evangelista — Front-End Developer/Designer"
+          alt="Angelo Gabriel Evangelista, Web Designer & SEO Specialist"
           class="w-9/12 object-contain md:w-auto md:h-full lg:w-7/12 lg:mt-20"
         />
       </div>
@@ -171,6 +171,7 @@ useHead({
     },
     { property: "og:site_name", content: "Angelo Gabriel Evangelista" },
     { property: "og:locale", content: "en_US" },
+    { property: "fb:app_id", content: "1845025506914646" },
     { name: "twitter:card", content: "summary_large_image" },
     { name: "twitter:title", content: title },
     { name: "twitter:description", content: description },
@@ -199,7 +200,7 @@ useHead({
           {
             "@type": "ProfessionalService",
             "@id": `${siteUrl}#projects`,
-            name: "Angelo Gabriel Evangelista - Web Design & SEO",
+            name: "Angelo Gabriel Evangelista, Web Designer & SEO Specialist",
             url: siteUrl,
             image,
             description:
