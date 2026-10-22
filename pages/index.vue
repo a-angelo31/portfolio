@@ -147,37 +147,53 @@
 </template>
 
 <script setup>
+const siteUrl = "https://gelo-dev.vercel.app/";
+const title = "Angelo Gabriel Evangelista | Web Designer & SEO Specialist";
+const description =
+  "Angelo Gabriel D. Evangelista — Web Designer & SEO Specialist in the Philippines, building responsive, SEO-optimized websites with Duda, WordPress, Vue & Nuxt.";
+const image = `${siteUrl}img/Me-2.png`;
+
 useHead({
-  title: "Angelo Gabriel Evangelista | Web Designer & SEO Specialist",
+  title,
+  htmlAttrs: { lang: "en" },
+  link: [{ rel: "canonical", href: siteUrl }],
   meta: [
-    {
-      name: "description",
-      content:
-        "Angelo Gabriel D. Evangelista — Web Designer & SEO Specialist in the Philippines, building responsive, SEO-optimized websites with Duda, WordPress, Vue & Nuxt.",
-    },
-    {
-      property: "og:title",
-      content: "Angelo Gabriel Evangelista | Web Designer & SEO Specialist",
-    },
-    {
-      property: "og:description",
-      content:
-        "Angelo Gabriel D. Evangelista — Web Designer & SEO Specialist in the Philippines, building responsive, SEO-optimized websites with Duda, WordPress, Vue & Nuxt.",
-    },
+    { name: "description", content: description },
+    { name: "robots", content: "index, follow, max-image-preview:large" },
+    { property: "og:title", content: title },
+    { property: "og:description", content: description },
     { property: "og:type", content: "website" },
-    { property: "og:url", content: "https://gelo-dev.vercel.app" },
-    { property: "og:image", content: "/img/Me-2.png" },
+    { property: "og:url", content: siteUrl },
+    { property: "og:image", content: image },
+    {
+      property: "og:image:alt",
+      content: "Angelo Gabriel Evangelista, Web Designer & SEO Specialist",
+    },
+    { property: "og:site_name", content: "Angelo Gabriel Evangelista" },
+    { property: "og:locale", content: "en_PH" },
     { name: "twitter:card", content: "summary_large_image" },
+    { name: "twitter:title", content: title },
+    { name: "twitter:description", content: description },
+    { name: "twitter:image", content: image },
+  ],
+  script: [
     {
-      name: "twitter:title",
-      content: "Angelo Gabriel Evangelista | Web Designer & SEO Specialist",
+      type: "application/ld+json",
+      innerHTML: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "Person",
+        name: "Angelo Gabriel D. Evangelista",
+        url: siteUrl,
+        image,
+        jobTitle: "Web Designer & SEO Specialist",
+        address: { "@type": "PostalAddress", addressCountry: "PH" },
+        knowsAbout: ["Duda", "WordPress", "Vue", "Nuxt", "SEO"],
+        sameAs: [
+          "www.linkedin.com/in/a-gabriel",
+          "https://github.com/a-angelo31",
+        ],
+      }),
     },
-    {
-      name: "twitter:description",
-      content:
-        "Angelo Gabriel D. Evangelista — Web Designer & SEO Specialist in the Philippines, building responsive, SEO-optimized websites with Duda, WordPress, Vue & Nuxt.",
-    },
-    { name: "twitter:image", content: "/img/Me-2.png" },
   ],
 });
 
