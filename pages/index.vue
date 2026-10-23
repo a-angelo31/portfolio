@@ -156,7 +156,11 @@ const image = `${siteUrl}img/Me-2.png`;
 useHead({
   title,
   htmlAttrs: { lang: "en" },
-  link: [{ rel: "canonical", href: siteUrl }],
+  link: [
+    { rel: "canonical", href: siteUrl },
+    { rel: "icon", type: "image/png", href: "/favicon.png" },
+    { rel: "apple-touch-icon", href: "/logo/apple-icon.png" },
+  ],
   meta: [
     { name: "description", content: description },
     { name: "robots", content: "index, follow, max-image-preview:large" },
